@@ -6,10 +6,8 @@ import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-//---------------- Replace with your Public API Key
 builder.init("142ae83a7d9349ccaad71add607b51ec");
 
-// Type definition for page props
 interface PageProps {
   page: BuilderContent | null;
 }

@@ -17,7 +17,7 @@ interface Banner {
 }
 
 interface SliderBannerProps {
-  banners?: Banner[]; 
+  banners?: Banner[];
 }
 
 interface CustomArrowProps {
@@ -28,7 +28,7 @@ const SliderBanner: React.FC<SliderBannerProps> = (props) => {
   const [sliderWidth, setSliderWidth] = useState<number>(0);
   const sliderRef = useRef<Slider | null>(null);
 
-  const sliderBanners = props.banners ?? []; 
+  const sliderBanners = props.banners ?? [];
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -76,7 +76,7 @@ const SliderBanner: React.FC<SliderBannerProps> = (props) => {
         style={{ margin: "0 5px" }}
       />
     ),
-    appendDots: (dots:React.ReactNode) => (
+    appendDots: (dots: React.ReactNode) => (
       <div
         style={{
           position: "absolute",
@@ -112,7 +112,9 @@ const SliderBanner: React.FC<SliderBannerProps> = (props) => {
           ))}
         </Slider>
       ) : (
-        <div className={`h-[400px] flex items-center justify-center text-gray-500`}>
+        <div
+          className={`h-[400px] flex items-center justify-center text-gray-500`}
+        >
           <CircularProgress />
         </div>
       )}
