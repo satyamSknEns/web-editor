@@ -24,7 +24,7 @@ interface PageProps {
   page: BuilderContent | null;
 }
 
-// Fetch content for the home page from Builder.io
+//---------- Fetch content for the home page from Builder.io
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const page = await builder
